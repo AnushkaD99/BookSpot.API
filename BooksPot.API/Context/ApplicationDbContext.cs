@@ -9,6 +9,10 @@ public class ApplicationDbContext : DbContext
     {
         
     }
-    
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+    }
     public DbSet<SavedBook> SavedBooks { get; set; }
+    public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 }
