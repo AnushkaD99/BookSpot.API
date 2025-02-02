@@ -9,11 +9,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bc8a172-4cb2-45f2-92e4-436006b5ba3e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Context/ApplicationDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Models/SavedBook.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BooksPot.API/Controllers/AuthController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BooksPot.API/Dtos/BookDetailDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BooksPot.API/Dtos/LoginResponseDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BooksPot.API/Dtos/RegisterResponseDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BooksPot.API/Handlers/Commands/AddFavouriteBookCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BooksPot.API/Handlers/Commands/LoginCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BooksPot.API/Handlers/Commands/RegisterCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BooksPot.API/Handlers/Commands/RemoveFavouriteBookCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BooksPot.API/Handlers/Queries/GetFavouriteBooksById.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BooksPot.API/Services/ITokenService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BooksPot.API/Services/TokenService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/dataSources/1c441510-aca0-4965-83fa-077084ea7ca7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/dataSources/1c441510-aca0-4965-83fa-077084ea7ca7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/dataSources/1c441510-aca0-4965-83fa-077084ea7ca7/storage_v2/_src_/database/BookSpot.q29Wew/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/dataSources/1c441510-aca0-4965-83fa-077084ea7ca7/storage_v2/_src_/database/BookSpot.q29Wew/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BooksPot.API/BooksPot.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/BooksPot.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BooksPot.API/Context/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/Context/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BooksPot.API/Controllers/BookController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/Controllers/BookController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BooksPot.API/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BooksPot.API/Models/ApplicationUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/Models/ApplicationUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BooksPot.API/Models/SavedBook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/Models/SavedBook.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BooksPot.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BooksPot.API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/appsettings.Development.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BooksPot.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +37,17 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2b08ace5e383450e96735b0e39367b41c928/b9/da475921/IConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1622b8f95d27187bc1fb39bac49bd64e928773df4fda6fcf6271680be54a2/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4b21fc3f8a3abb5d25f06c622276fbec0fd3932f169cc6af520bf5abc6a46b4/DbSet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d382df578ec93391918cfaa4ce7f4b8f35c9aed1241d6556dc9be26df13c/IdentityUser.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -33,24 +58,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "DBModels",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.BooksPot.API: http.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;userRegistration&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.BooksPot.API: http">
     <configuration name="BooksPot.API: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/BooksPot.API/BooksPot.API.csproj" />
@@ -92,7 +119,10 @@
       <option name="presentableId" value="Default" />
       <updated>1738235890550</updated>
       <workItem from="1738235908674" duration="959000" />
-      <workItem from="1738236931226" duration="3561000" />
+      <workItem from="1738236931226" duration="21523000" />
+      <workItem from="1738328541755" duration="6055000" />
+      <workItem from="1738484744160" duration="20079000" />
+      <workItem from="1738506227097" duration="777000" />
     </task>
     <servers />
   </component>

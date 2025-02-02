@@ -3,17 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>752</IntrospectionStateNumber>
+      <IntrospectionStateNumber>781</IntrospectionStateNumber>
       <ServerVersion>17.2</ServerVersion>
-      <StartupTime>1738173826</StartupTime>
+      <StartupTime>1738473361</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -808,7 +800,7 @@ false Zulu
 14704||10|C|G
 14704||-9223372036854775808|U|G
 14704||10|U|G</Grants>
-      <IntrospectionStateNumber>752</IntrospectionStateNumber>
+      <IntrospectionStateNumber>781</IntrospectionStateNumber>
       <ObjectId>16388</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4235,11 +4227,267 @@ false Zulu
     <schema id="265" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>752</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2025-01-30.12:32:26</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>781</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2025-02-02.13:53:25</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
+    <sequence id="266" parent="265" name="SavedBooks_Id_seq">
+      <ObjectId>16414</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>764</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <table id="267" parent="265" name="ApplicationUsers">
+      <ObjectId>16407</ObjectId>
+      <StateNumber>768</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="268" parent="265" name="SavedBooks">
+      <ObjectId>16415</ObjectId>
+      <StateNumber>780</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="269" parent="265" name="__EFMigrationsHistory">
+      <ObjectId>16402</ObjectId>
+      <StateNumber>763</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <column id="270" parent="267" name="Id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="271" parent="267" name="LastName">
+      <Position>2</Position>
+      <StateNumber>768</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="272" parent="267" name="UserName">
+      <Position>3</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="273" parent="267" name="NormalizedUserName">
+      <Position>4</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="274" parent="267" name="Email">
+      <Position>5</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="275" parent="267" name="NormalizedEmail">
+      <Position>6</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="276" parent="267" name="EmailConfirmed">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>boolean|0s</StoredType>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="277" parent="267" name="PasswordHash">
+      <Position>8</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="278" parent="267" name="SecurityStamp">
+      <Position>9</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="279" parent="267" name="ConcurrencyStamp">
+      <Position>10</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="280" parent="267" name="PhoneNumber">
+      <Position>11</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="281" parent="267" name="PhoneNumberConfirmed">
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>boolean|0s</StoredType>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="282" parent="267" name="TwoFactorEnabled">
+      <NotNull>1</NotNull>
+      <Position>13</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>boolean|0s</StoredType>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="283" parent="267" name="LockoutEnd">
+      <Position>14</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>timestamp with time zone|0s</StoredType>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="284" parent="267" name="LockoutEnabled">
+      <NotNull>1</NotNull>
+      <Position>15</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>boolean|0s</StoredType>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="285" parent="267" name="AccessFailedCount">
+      <NotNull>1</NotNull>
+      <Position>16</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="286" parent="267" name="FirstName">
+      <Position>17</Position>
+      <StateNumber>768</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="287" parent="267" name="PK_ApplicationUsers">
+      <ColNames>Id</ColNames>
+      <ObjectId>16412</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>764</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <key id="288" parent="267" name="PK_ApplicationUsers">
+      <ObjectId>16413</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>764</StateNumber>
+      <UnderlyingIndexId>16412</UnderlyingIndexId>
+    </key>
+    <column id="289" parent="268" name="Id">
+      <IdentityKind>by-default</IdentityKind>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <SequenceId>16414</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="290" parent="268" name="Title">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="291" parent="268" name="Author">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="292" parent="268" name="CoverImage">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="293" parent="268" name="CreatedAt">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>764</StateNumber>
+      <StoredType>timestamp with time zone|0s</StoredType>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="294" parent="268" name="UserId">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StateNumber>772</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="295" parent="268" name="Isbn">
+      <DefaultExpression>&apos;&apos;::text</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StateNumber>772</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="296" parent="268" name="IsDeleted">
+      <DefaultExpression>false</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StateNumber>780</StateNumber>
+      <StoredType>boolean|0s</StoredType>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="297" parent="268" name="PK_SavedBooks">
+      <ColNames>Id</ColNames>
+      <ObjectId>16420</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>772</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="298" parent="268" name="PK_SavedBooks">
+      <ObjectId>16421</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>764</StateNumber>
+      <UnderlyingIndexId>16420</UnderlyingIndexId>
+    </key>
+    <column id="299" parent="269" name="MigrationId">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>763</StateNumber>
+      <StoredType>varchar(150)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="300" parent="269" name="ProductVersion">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>763</StateNumber>
+      <StoredType>varchar(32)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="301" parent="269" name="PK___EFMigrationsHistory">
+      <ColNames>MigrationId</ColNames>
+      <ObjectId>16405</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>763</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <key id="302" parent="269" name="PK___EFMigrationsHistory">
+      <ObjectId>16406</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>763</StateNumber>
+      <UnderlyingIndexId>16405</UnderlyingIndexId>
+    </key>
   </database-model>
 </dataSource>

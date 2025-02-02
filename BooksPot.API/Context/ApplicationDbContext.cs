@@ -15,4 +15,5 @@ public class ApplicationDbContext : DbContext
     }
     public DbSet<SavedBook> SavedBooks { get; set; }
     public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+    // public DbSet<ApplicationUserRole> ApplicationUserRoles { get; set; }
 }
