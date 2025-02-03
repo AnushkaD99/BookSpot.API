@@ -12,6 +12,7 @@ public class SavedBook
     
     //foreign key
     public string UserId { get; set; }
+    public ApplicationUser User { get; set; }
     
     private SavedBook(){}
 
@@ -27,22 +28,6 @@ public class SavedBook
         Author = author;
         CoverImage = coverImage;
         UserId = userId;
-    }
-
-    public SavedBook CreateAsync(
-        string isbn,
-        string title,
-        string author,
-        string coverImage,
-        string userId)
-    {
-        Isbn = isbn;
-        Title = title;
-        Author = author;
-        CoverImage = coverImage;
-        UserId = userId;
-
-        return this;
     }
 
     public void DeleteAsync(int id)

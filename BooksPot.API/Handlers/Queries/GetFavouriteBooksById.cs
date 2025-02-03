@@ -20,6 +20,7 @@ public class GetFavouriteBooksByIdHandler
         var favouriteBooks = await _context.SavedBooks
             .Where(b => b.UserId == query.UserId && !b.IsDeleted)
             .Select(b => new BookDetailDto(
+                b.Id,
                 b.Isbn,
                 b.Title,
                 b.Author,

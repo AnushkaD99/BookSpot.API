@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>781</IntrospectionStateNumber>
+      <IntrospectionStateNumber>797</IntrospectionStateNumber>
       <ServerVersion>17.2</ServerVersion>
       <StartupTime>1738473361</StartupTime>
       <TimeZones>true ACDT
@@ -800,7 +800,7 @@ false Zulu
 14704||10|C|G
 14704||-9223372036854775808|U|G
 14704||10|U|G</Grants>
-      <IntrospectionStateNumber>781</IntrospectionStateNumber>
+      <IntrospectionStateNumber>797</IntrospectionStateNumber>
       <ObjectId>16388</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4227,8 +4227,8 @@ false Zulu
     <schema id="265" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>781</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2025-02-02.13:53:25</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>797</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2025-02-03.07:59:12</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4243,13 +4243,13 @@ false Zulu
     </sequence>
     <table id="267" parent="265" name="ApplicationUsers">
       <ObjectId>16407</ObjectId>
-      <StateNumber>768</StateNumber>
+      <StateNumber>789</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="268" parent="265" name="SavedBooks">
       <ObjectId>16415</ObjectId>
-      <StateNumber>780</StateNumber>
+      <StateNumber>789</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4444,7 +4444,15 @@ false Zulu
       <StoredType>boolean|0s</StoredType>
       <TypeId>16</TypeId>
     </column>
-    <index id="297" parent="268" name="PK_SavedBooks">
+    <foreign-key id="297" parent="268" name="FK_SavedBooks_ApplicationUsers_UserId">
+      <ColNames>UserId</ColNames>
+      <ObjectId>24585</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <StateNumber>789</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16407</RefTableId>
+    </foreign-key>
+    <index id="298" parent="268" name="PK_SavedBooks">
       <ColNames>Id</ColNames>
       <ObjectId>16420</ObjectId>
       <Primary>1</Primary>
@@ -4452,27 +4460,36 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="298" parent="268" name="PK_SavedBooks">
+    <index id="299" parent="268" name="IX_SavedBooks_UserId">
+      <ColNames>UserId</ColNames>
+      <ObjectId>24584</ObjectId>
+      <StateNumber>789</StateNumber>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <key id="300" parent="268" name="PK_SavedBooks">
       <ObjectId>16421</ObjectId>
       <Primary>1</Primary>
       <StateNumber>764</StateNumber>
       <UnderlyingIndexId>16420</UnderlyingIndexId>
     </key>
-    <column id="299" parent="269" name="MigrationId">
+    <column id="301" parent="269" name="MigrationId">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>763</StateNumber>
       <StoredType>varchar(150)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="300" parent="269" name="ProductVersion">
+    <column id="302" parent="269" name="ProductVersion">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>763</StateNumber>
       <StoredType>varchar(32)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="301" parent="269" name="PK___EFMigrationsHistory">
+    <index id="303" parent="269" name="PK___EFMigrationsHistory">
       <ColNames>MigrationId</ColNames>
       <ObjectId>16405</ObjectId>
       <Primary>1</Primary>
@@ -4483,7 +4500,7 @@ false Zulu
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="302" parent="269" name="PK___EFMigrationsHistory">
+    <key id="304" parent="269" name="PK___EFMigrationsHistory">
       <ObjectId>16406</ObjectId>
       <Primary>1</Primary>
       <StateNumber>763</StateNumber>

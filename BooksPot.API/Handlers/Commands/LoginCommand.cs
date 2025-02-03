@@ -49,6 +49,6 @@ public class LoginCommandHandler
             throw new UnauthorizedAccessException("Invalid username or password");
 
         var token = await _tokenService.GenerateToken(user);
-        return new LoginResponseDto(user.UserName, token);
+        return new LoginResponseDto(user.UserName, token, user.Id);
     }
 }

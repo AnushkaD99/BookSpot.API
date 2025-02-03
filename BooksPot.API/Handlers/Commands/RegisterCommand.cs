@@ -28,7 +28,7 @@ public class RegisterCommandHandler
             FirstName = command.FirstName,
             LastName = command.LastName,
             Email = command.Email,
-            UserName = command.Email // Username is typically the same as email
+            UserName = command.Email
         };
 
         // Create the user with the provided password
@@ -36,7 +36,6 @@ public class RegisterCommandHandler
 
         if (!result.Succeeded)
         {
-            // Handle errors (e.g., password requirements not met, email already exists, etc.)
             throw new ApplicationException("User creation failed: " + string.Join(", ", result.Errors.Select(e => e.Description)));
         }
 

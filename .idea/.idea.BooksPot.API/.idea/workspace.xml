@@ -9,43 +9,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bc8a172-4cb2-45f2-92e4-436006b5ba3e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/dataSources/1c441510-aca0-4965-83fa-077084ea7ca7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/dataSources/1c441510-aca0-4965-83fa-077084ea7ca7/storage_v2/_src_/database/BookSpot.q29Wew.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/dataSources/1c441510-aca0-4965-83fa-077084ea7ca7/storage_v2/_src_/database/BookSpot.q29Wew/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/dataSources/1c441510-aca0-4965-83fa-077084ea7ca7/storage_v2/_src_/database/BookSpot.q29Wew/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/dataSources/1c441510-aca0-4965-83fa-077084ea7ca7/storage_v2/_src_/database/BookSpot.q29Wew/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API.sln.DotSettings.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Context/ApplicationDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Controllers/AuthController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Controllers/BookController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Dtos/BookDetailDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Dtos/LoginResponseDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Dtos/RegisterResponseDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Handlers/Commands/AddFavouriteBookCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Handlers/Commands/LoginCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Handlers/Commands/RegisterCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Handlers/Commands/RemoveFavouriteBookCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Handlers/Queries/GetFavouriteBooksById.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Migrations/20250130152407_InitialMigrationAdded.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Migrations/20250130152407_InitialMigrationAdded.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Migrations/20250202082921_ApplicationUserPropertyAdded.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Migrations/20250202082921_ApplicationUserPropertyAdded.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Migrations/20250202130629_SavedBooksDomainChanged.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Migrations/20250202130629_SavedBooksDomainChanged.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Migrations/20250202135226_IsDeletedPropertyAddedToBookDomain.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Migrations/20250202135226_IsDeletedPropertyAddedToBookDomain.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Models/ApplicationUser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Models/SavedBook.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Services/ITokenService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BooksPot.API/Services/TokenService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BooksPot.API/EntityConfig/SavedBookEntityConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/dataSources/1c441510-aca0-4965-83fa-077084ea7ca7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/dataSources/1c441510-aca0-4965-83fa-077084ea7ca7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/dataSources/1c441510-aca0-4965-83fa-077084ea7ca7/storage_v2/_src_/database/BookSpot.q29Wew/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/dataSources/1c441510-aca0-4965-83fa-077084ea7ca7/storage_v2/_src_/database/BookSpot.q29Wew/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BooksPot.API/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BooksPot.API/BooksPot.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/BooksPot.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BooksPot.API/Dtos/BookDetailDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/Dtos/BookDetailDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BooksPot.API/Dtos/LoginResponseDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/Dtos/LoginResponseDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BooksPot.API/Handlers/Commands/AddFavouriteBookCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/Handlers/Commands/AddFavouriteBookCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BooksPot.API/Handlers/Commands/LoginCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/Handlers/Commands/LoginCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BooksPot.API/Handlers/Queries/GetFavouriteBooksById.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/Handlers/Queries/GetFavouriteBooksById.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BooksPot.API/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BooksPot.API/Models/ApplicationUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/Models/ApplicationUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BooksPot.API/Models/SavedBook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/Models/SavedBook.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BooksPot.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BooksPot.API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BooksPot.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/BooksPot.API/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,10 +51,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.BooksPot.API: http.executor": "Debug",
+    ".NET Launch Settings Profile.BooksPot.API: http.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Merging master",
+    "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -137,7 +113,9 @@
       <workItem from="1738236931226" duration="21523000" />
       <workItem from="1738328541755" duration="6055000" />
       <workItem from="1738484744160" duration="20079000" />
-      <workItem from="1738506227097" duration="2166000" />
+      <workItem from="1738506227097" duration="2572000" />
+      <workItem from="1738521215010" duration="6899000" />
+      <workItem from="1738558632909" duration="6355000" />
     </task>
     <servers />
   </component>

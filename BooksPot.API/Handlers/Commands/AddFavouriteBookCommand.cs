@@ -1,6 +1,7 @@
 using BooksPot.API.Context;
 using BooksPot.API.DTOs;
 using BooksPot.API.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BooksPot.API.Handlers.Commands;
 
@@ -22,29 +23,32 @@ public class AddFavouriteBookCommandHandler
 
     public async Task<BookDetailDto> Handle(AddFavouriteBookCommand command)
     {
+        // Check if the book is already saved by the user
+        var existingBook = await _context.SavedBooks
+            .FirstOrDefaultAsync(b => b.UserId == command.UserId && b.Isbn == command.Isbn);
+
+        if (existingBook != null)
+        {
+            throw new InvalidOperationException("This book is already saved.");
+        }
+
         var favBook = new SavedBook(
             command.Isbn,
             command.Title,
             command.Author,
             command.CoverImage,
             command.UserId);
-        
-        var result = favBook.CreateAsync(
-            command.Isbn, 
-            command.Title, 
-            command.Author, 
-            command.CoverImage,
-            command.UserId);
 
-        await _context.SavedBooks.AddAsync(result);
+        await _context.SavedBooks.AddAsync(favBook);
         await _context.SaveChangesAsync();
         
         return new BookDetailDto(
-            result.Isbn,
-            result.Title,
-            result.Author,
-            result.CoverImage,
-            result.UserId,
-            result.CreatedAt);
+            favBook.Id,
+            favBook.Isbn,
+            favBook.Title,
+            favBook.Author,
+            favBook.CoverImage,
+            favBook.UserId,
+            favBook.CreatedAt);
     }
 }

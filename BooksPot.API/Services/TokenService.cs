@@ -24,24 +24,8 @@ public class TokenService : ITokenService
         var jwtSettings = _configuration.GetSection("Jwt");
         var key = Encoding.ASCII.GetBytes(jwtSettings["Key"]);
 
-        // Fetch the user's role asynchronously
-        // var userRole = await _context.ApplicationUserRoles
-        //     .FirstOrDefaultAsync(ur => ur.UserId == user.Id);
-
-        // var claims = new List<Claim>
-        // {
-        //     new Claim(ClaimTypes.NameIdentifier, user.Id),
-        //     new Claim(ClaimTypes.Email, user.Email)
-        // };
-        //
-        // if (userRole != null)
-        // {
-        //     claims.Add(new Claim(ClaimTypes.Role, userRole.RoleId));
-        // }
-
         var tokenDescriptor = new SecurityTokenDescriptor
         {
-            // Subject = new ClaimsIdentity(claims),
             Expires = DateTime.UtcNow.AddDays(7),
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
             Issuer = jwtSettings["Issuer"],
@@ -71,16 +55,14 @@ public class TokenService : ITokenService
                 ValidIssuer = jwtSettings["Issuer"],
                 ValidateAudience = true,
                 ValidAudience = jwtSettings["Audience"],
-                ValidateLifetime = true, // Check if the token is not expired
-                ClockSkew = TimeSpan.Zero // No tolerance for expiration time
+                ValidateLifetime = true,
+                ClockSkew = TimeSpan.Zero
             }, out SecurityToken validatedToken);
 
-            // If validation passes, the token is valid
             return true;
         }
         catch
         {
-            // If validation fails, the token is invalid
             return false;
         }
     }
